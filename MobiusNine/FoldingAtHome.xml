@@ -1,25 +1,10 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>foldingathome</Name>
-  <Repository>mobiusnine/foldingathome</Repository>
-  <Registry>https://hub.docker.com/r/mobiusnine/foldingathome//Dockerfile/</Registry>
-  <Shell>sh</Shell>
-  <Privileged>false</Privileged>
-  <Support>https://hub.docker.com/r/mobiusnine/foldingathome/</Support>
-  <Project/>
-  <Overview>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Overview>
-  <Category>Other:</Category>
-  <WebUI>http://[IP]:[PORT:7396]/</WebUI>
-  <TemplateURL/>
-  <Icon>https://i.imgur.com/AKptFCw.png</Icon>
-  <ExtraParams/>
-  <PostArgs/>
-  <CPUset/>
-  <DateInstalled>1552621624</DateInstalled>
-  <DonateText/>
-  <DonateLink/>
-  <Description>
-    This is built off of the work of captinsano. I've just built updated the base image to fix an issue where certain work units couldn't be processed.
+   <TemplateURL>https://raw.githubusercontent.com/MobiusNine/docker-templates/master/MobiusNine/FoldingAtHome.xml</TemplateURL>
+   <Beta>False</Beta>
+   <Category>Other:</Category>
+   <Name>FoldingAtHome</Name>
+   <Description>
     FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.[br][br]
     [b][span style='color: #E80000;']WARNING: Using this container will increase CPU usage, continue @ own risk[/span][/b][br]
 	[b][span style='color: #E80000;']Directions:[/span][/b][br]
@@ -27,7 +12,14 @@
 	[b]The program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]
 	[b]The WebUI is accessible through  http://IPADDRESS:7396.[br]
     [b]/etc/fahclient[/b] : this path is used to store the configuration file for FAHClient.[br]
-  </Description>
+   </Description>
+  <Overview>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Overview>
+  <Support>http://lime-technology.com/forum/index.php?topic=37729.0</Support>
+  <Repository>mobiusnine/foldingathome</Repository>
+  <Registry>https://registry.hub.docker.com/u/mobiusnine/foldingathome</Registry>
+  <BindTime>true</BindTime>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -68,4 +60,7 @@
   <Config Name="Host Key 1" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Container Variable: NVIDIA_DRIVER_CAPABILITIES" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Host Key 2" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Container Variable: NVIDIA_VISIBLE_DEVICES" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FoldingAtHome" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FoldingAtHome</Config>
+  <WebUI>http://[IP]:[PORT:7396]/</WebUI>
+  <Banner>http://i.imgur.com/qcDygxd.png</Banner>
+  <Icon>https://i.imgur.com/AKptFCw.png</Icon>
 </Container>
