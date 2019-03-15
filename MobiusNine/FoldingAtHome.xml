@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Container>
-<Beta>False</Beta>
-<Category>Other:</Category>
-  <Name>FoldingAtHome</Name>
+  <Name>foldingathome</Name>
+  <Repository>mobiusnine/foldingathome</Repository>
+  <Registry>https://hub.docker.com/r/mobiusnine/foldingathome//Dockerfile/</Registry>
+  <Network>bridge</Network>
+  <MyIP>192.168.1.240</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/mobiusnine/foldingathome/</Support>
+  <Overview>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Overview>
+  <Category>Other:</Category>
+  <WebUI>http://[IP]:[PORT:7396]/</WebUI>
+  <Icon>https://i.imgur.com/AKptFCw.png</Icon>
   <Description>
     This is built off of the work of captinsano. I've just built updated the base image to fix an issue where certain work units couldn't be processed.
     FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.[br][br]
@@ -13,12 +22,6 @@
 	[b]The WebUI is accessible through  http://IPADDRESS:7396.[br]
     [b]/etc/fahclient[/b] : this path is used to store the configuration file for FAHClient.[br]
   </Description>
-  <Overview>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Overview>
-  <Support>http://lime-technology.com/forum/index.php?topic=37729.0</Support>
-  <Registry>https://registry.hub.docker.com/u/mobiusnine/foldingathome</Registry>
-  <Repository>mobiusnine/foldingathome</Repository>
-  <BindTime>true</BindTime>
-  <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -36,12 +39,27 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir></HostDir>
+      <HostDir>/mnt/user/appdata/FoldingAtHome</HostDir>
       <ContainerDir>/config</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:7396]/</WebUI>
-  <Banner>http://i.imgur.com/qcDygxd.png</Banner>
-  <Icon>http://i.imgur.com/AKptFCw.png</Icon>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>NVIDIA_DRIVER_CAPABILITIES</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>NVIDIA_VISIBLE_DEVICES</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="36330" Default="36330" Mode="tcp" Description="Container Port: 36330" Type="Port" Display="always" Required="true" Mask="false">36330</Config>
+  <Config Name="Host Port 2" Target="7396" Default="7396" Mode="tcp" Description="Container Port: 7396" Type="Port" Display="always" Required="true" Mask="false">7396</Config>
+  <Config Name="Host Key 1" Target="NVIDIA_DRIVER_CAPABILITIES" Default="" Mode="" Description="Container Variable: NVIDIA_DRIVER_CAPABILITIES" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Host Key 2" Target="NVIDIA_VISIBLE_DEVICES" Default="" Mode="" Description="Container Variable: NVIDIA_VISIBLE_DEVICES" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="AppData Config Path" Target="/config" Default="/mnt/user/appdata/FoldingAtHome" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced-hide" Required="true" Mask="false">/mnt/user/appdata/FoldingAtHome</Config>
 </Container>
