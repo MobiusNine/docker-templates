@@ -11,6 +11,8 @@
     [b]The program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]
     [b]The WebUI is accessible through  http://IPADDRESS:7396.[br]
     [b]/etc/fahclient[/b] : this path is used to store the configuration file for FAHClient.[br]
+    [b]The extra Nvidia variables are for GPU passthrough. Information on that can be found here:[br]
+    [b]https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/
    </Overview>
   <Description>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Description>
   <Support>http://lime-technology.com/forum/index.php?topic=37729.0</Support>
