@@ -20,16 +20,25 @@
   <DateInstalled>1552621624</DateInstalled>
   <DonateText/>
   <DonateLink/>
-  <Description>FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Description>
+  <Description>
+    This is built off of the work of captinsano. I've just built updated the base image to fix an issue where certain work units couldn't be processed.
+    FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.[br][br]
+    [b][span style='color: #E80000;']WARNING: Using this container will increase CPU usage, continue @ own risk[/span][/b][br]
+	[b][span style='color: #E80000;']Directions:[/span][/b][br]
+	[b]Edit the config.xml file with your preferences (Username/Team etc.)[br]
+	[b]The program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]
+	[b]The WebUI is accessible through  http://IPADDRESS:7396.[br]
+    [b]/etc/fahclient[/b] : this path is used to store the configuration file for FAHClient.[br]
+  </Description>
   <Networking>
-    <Mode>br0</Mode>
+    <Mode>bridge</Mode>
     <Publish>
       <Port>
         <HostPort>36330</HostPort>
         <ContainerPort>36330</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
-      <Port>
+	  <Port>
         <HostPort>7396</HostPort>
         <ContainerPort>7396</ContainerPort>
         <Protocol>tcp</Protocol>
