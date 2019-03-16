@@ -17,7 +17,7 @@
   <Description>This docker should support gpu folding with modern Nvidia GPUs. It has been tested to do so with a GTX 1060. FoldingAtHome is a project ran by Stanford University to network thousands of computers together, using them to work out the folding of proteins to aid in the research of Alzheimer's, Huntington's, Parkinson's, and many cancers.</Description>
   <Support>http://lime-technology.com/forum/index.php?topic=37729.0</Support>
   <Repository>mobiusnine/foldingathome</Repository>
-  <Registry>https://registry.hub.docker.com/u/mobiusnine/foldingathome</Registry>
+  <Registry>https://registry.hub.docker.com/u/mobiusnine/testingfoldingathome</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
