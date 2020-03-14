@@ -12,7 +12,7 @@
     [b]/mnt/user/appdata/FoldingAtHome[/b] : this path is used to store the config.xml file for FAHClient.[br]
     [b]The program can be controlled by FAHControl App from http://folding.stanford.edu/.[br]
     [b]The FaHControl App is the preferred method of interfacing with the server as it provides more fine grained control vs the WebUI[br]
-    [b]The WebUI is accessible through  http://<SERVER_IP>:7396.[br]
+    [b]The WebUI is accessible through  http://SERVER_IP:7396.[br]
     [b]The extra Nvidia variables are for GPU passthrough. Information on that can be found here:[br]
     [b]https://forums.unraid.net/topic/77813-plugin-linuxserverio-unraid-nvidia/
    </Overview>
